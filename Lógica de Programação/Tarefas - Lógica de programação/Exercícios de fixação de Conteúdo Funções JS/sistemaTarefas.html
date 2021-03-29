@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sistemas de tarefas</title>
+		<link rel="stylesheet" href="sistemaTarefas.css" />
+	</head>
+	<body>
+    <form action="" id="busca">
+      <input type="text" name="" id="inputBusca" placeholder="Digite o título da tarefa que deseja buscar">
+    </form>
+
+		<div id="form">
+			<form>
+				<h2>Tarefas</h2>
+				<label for="tituloTarefa">Nome da tarefa: </label>
+				<input type="text" name="" id="tituloTarefa" />
+				<label for="descricaoTarefa">Descrição da tarefa: </label>
+				<textarea name="" id="descricaoTarefa" cols="2" rows="10"></textarea>
+				<div>
+					<button
+						type="button"
+						onclick="adicionaTarefa(tituloTarefa.value, descricaoTarefa.value)"
+					>
+						Criar tarefa
+					</button>
+				</div>
+			</form>
+		</div>
+		<h3 id="tarefas">Tarefas à fazer</h3>
+		<div id="listaTarefas">
+		</div>
+		<h3 id="concluidas">Tarefas concluídas</h3>
+		<div id="listaConcluidas"></div>
+		<script src="sistemaTarefas.js"></script>
+	</body>
+</html>

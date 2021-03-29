@@ -1,0 +1,11 @@
+Elmentos de bloco (quebram linha):
+div
+h1 - h6
+p
+
+Elementos em linha (ficam um do lado do outro)
+span
+strong
+em
+button
+img

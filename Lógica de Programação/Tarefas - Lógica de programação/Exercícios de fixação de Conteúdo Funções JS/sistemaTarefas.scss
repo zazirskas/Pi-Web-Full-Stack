@@ -1,0 +1,63 @@
+#card {
+  display: flex;
+	background-color: beige;
+	width: 30%;
+	height: 20%;
+	text-align: center;
+  border: 1px solid black;
+  margin: 5px;
+  flex-direction: column;
+  align-items: center;
+  justify-items: flex-end;
+  justify-content: space-between;
+
+  div {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    input{
+      margin-right: 10px;
+    }
+  }
+
+	h4 {
+		margin: 0 0 0 0;
+	}
+}
+
+#listaTarefas {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+#listaConcluidas {
+  display: flex;
+  width: 100%;
+}
+
+#form {
+	form {
+		display: flex;
+		flex-direction: column;
+	}
+
+	input#tituloTarefa {
+		width: 300px;
+	}
+
+	textarea#descricaoTarefa {
+		width: 300px;
+		height: 200px;
+	}
+
+  button {
+    margin-top: 10px;
+  }
+}
+
+#inputBusca {
+  height: 30px;
+  width: 400px;
+}
