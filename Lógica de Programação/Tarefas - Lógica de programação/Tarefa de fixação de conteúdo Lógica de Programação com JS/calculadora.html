@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Calculadora</title>
+	</head>
+	<body>
+		<h3>Calculadora</h3>
+		<form action="">
+			<label for="dados"
+				>Insira números e uma operação básica (+ - * / ):
+			</label>
+			<input type="text" name="" id="dados" />
+		</form>
+		<button type="button" onclick="calcular(dados.value)">Calcular</button>
+    <button type="button" onclick="calcularQuadrado(dados.value)">Calcular quadrado do número</button>
+    <h3>Resultado: </h3>
+		<h4 id="resultado"></h4>
+		<script src="calculadora.js"></script>
+	</body>
+</html>
