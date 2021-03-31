@@ -7,21 +7,26 @@
 		<title>Lista de compras</title>
 	</head>
 	<body>
-    <form>
-      <div>
-        <label for="nomeItem">Produto: </label>
-				<input type="text" name="" id="nomeItem" />
+		<form>
+			<input id="busca" type="text" style="margin-bottom: 10px" placeholder="Busca" />
+			<div>
+				<label for="nomeItem">Produto: </label>
+				<input type="text" name="" id="nomeItem" style="margin-bottom: 10px" />
 			</div>
 			<button id="" type="button" onclick="adicionaItem(nomeItem.value)">
 				Adicionar à lista
 			</button>
-      <button id="ordenar" type="button" onclick="ordenaLista()">Ordenar</button>
-      <button id="limpar" type="button" onclick="limparLista()">Limpar</button>
+			<button id="ordenar" type="button" onclick="ordenaLista()">
+				Ordenar
+			</button>
+			<button id="limpar" type="button" onclick="limparLista()">Limpar</button>
+			<button id="Buscar" type="button" onclick="buscaProduto(busca.value)">Buscar</button>
+			<button id="resetarBusca" type="button" onclick="resetBusca()">Resetar busca</button>
+			<button id="deleta" type="button" onclick="deletaItem(nomeItem.value)">Deletar item</button>
 		</form>
 		<div class="lista">
-      <ul id="listaCompras">
-      </ul>
+			<ul id="listaCompras"></ul>
 		</div>
-    <script src="ex1-set1.js"></script>
+		<script src="ex1-set1.js"></script>
 	</body>
 </html>
