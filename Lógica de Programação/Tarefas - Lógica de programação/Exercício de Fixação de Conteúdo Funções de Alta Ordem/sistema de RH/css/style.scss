@@ -1,0 +1,106 @@
+.logo {
+  text-decoration: none;
+  color: #3d3b3b;
+  font-size: 12px;
+  margin-left: 100px;
+  white-space: nowrap;
+}
+
+input:focus{
+  outline: 0;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  height: 50px;
+  flex-wrap: nowrap;
+  padding-bottom: 10px;
+  
+  div.busca {
+    margin-left: 20px;
+    height: 50px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+
+    input {
+
+      padding-left: 20px;
+      margin-left: 20px;
+      border: 1px solid #3d3b3b;
+      border-radius: 100000px;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+div.inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-between;
+  flex-wrap: wrap;
+  width: 700px;
+  height: 70px;
+  
+  input {
+    margin-right: 20px;
+  }
+
+  label {
+    margin-right: 5px;
+  }
+}
+
+h2 {
+  margin-left: 25px;
+}
+
+
+div.form {
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+}
+
+div.form-acoes {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  
+  button {
+    margin-right: 10px;
+  }
+}
+
+div.dados {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  h4 {
+    margin-left: 100px;
+  }
+}
+
+div.colaboradores {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0 10px 10px 5px;
+  
+}
+
+div.colaborador {
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 250px;
+  padding: 10px;
+  border: 1px solid black;
+
+  div.selecionar {
+    display: flex;
+    justify-content: center;
+  }
+}

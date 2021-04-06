@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sistema de Recursos Humanos</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<header>
+			<a href="sistema.html" class="logo"
+				><h1 class="">Sistema de Recursos Humanos</h1></a
+			>
+			<div class="busca">
+				<select name="" id="tipoBusca">
+          <option value="id">Id</option>
+          <option value="nome">Nome</option>
+          <option value="cargo">Cargo</option>
+        </select>
+				<input
+					type="search"
+					name="busca"
+					id="inputBusca"
+					placeholder="Digite para buscar"
+				/>
+			</div>
+		</header>
+		<main>
+			<h2>Cadastro colaboradores</h2>
+			<div class="form">
+				<form action="">
+					<div class="inputs">
+						<label for="nome">Nome:</label>
+						<input type="text" name="nome" id="nomeColaborador" />
+						<label for="idade">Idade:</label>
+						<input type="text" name="idade" id="idadeColaborador" />
+						<label for="cargo">Cargo:</label>
+						<input type="text" name="cargo" id="cargoColaborador" />
+						<label for="salario">Salário:</label>
+						<input type="text" name="salario" id="salarioColaborador" />
+						<label for="data-de-admissao">Data de admissão: </label>
+						<input type="date" name="data-de-admissao" id="admissaoColaborador" />
+					</div>
+					<div class="form-acoes">
+						<button type="button" onclick="adicionarColaborador(nomeColaborador.value, idadeColaborador.value, cargoColaborador.value, salarioColaborador.value, admissaoColaborador.value)">Cadastrar colaborador</button>
+						<button type="button" onclick="removerColaborador()">Remover colaborador</button>
+						<button type="button" id="edicao" onclick="editarColaborador()">Editar colaborador</button>
+					</div>
+				</form>
+			</div>
+			<div class="dados">
+				<h2>Painel</h2>
+				<h4 id="totalColaboradores">Total de colaboradores:</h4>
+				<h4 id="custoMensal">Custo mensal de colaboradores:</h4>
+				<h4 id="mediaIdade">Média da idade dos colaboradores:</h4>
+				<h4 id="mediaSalarios">Média dos salários dos colaboradores:</h4>
+			</div>
+			<h2>Colaboradores</h2>
+			<div class="colaboradores" id="colaboradores">
+				<div class="colaborador">
+					<h5>Nome:</h5>
+					<h5>Idade:</h5>
+					<h5>Cargo:</h5>
+					<h5>Salário:</h5>
+					<h5>Data de admisão:</h5>
+					<div class="selecionar">
+						<label for="selecionar"><strong>Selecionar?</strong></label>
+						<input type="radio" name="selecionar" id=""/>
+					</div>
+				</div>
+			</div>
+		</main>
+    <script src="sistema.js"></script>
+	</body>
+</html>

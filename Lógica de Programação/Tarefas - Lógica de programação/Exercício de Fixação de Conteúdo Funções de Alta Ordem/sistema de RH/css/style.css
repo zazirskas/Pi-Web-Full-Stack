@@ -1,0 +1,135 @@
+.logo {
+  text-decoration: none;
+  color: #3d3b3b;
+  font-size: 12px;
+  margin-left: 100px;
+  white-space: nowrap;
+}
+
+input:focus {
+  outline: 0;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  height: 50px;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  padding-bottom: 10px;
+}
+
+header div.busca {
+  margin-left: 20px;
+  height: 50px;
+  width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header div.busca input {
+  padding-left: 20px;
+  margin-left: 20px;
+  border: 1px solid #3d3b3b;
+  border-radius: 100000px;
+  height: 100%;
+  width: 100%;
+}
+
+div.inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 700px;
+  height: 70px;
+}
+
+div.inputs input {
+  margin-right: 20px;
+}
+
+div.inputs label {
+  margin-right: 5px;
+}
+
+h2 {
+  margin-left: 25px;
+}
+
+div.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+  padding-bottom: 10px;
+}
+
+div.form-acoes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 20px;
+}
+
+div.form-acoes button {
+  margin-right: 10px;
+}
+
+div.dados {
+  border-bottom: solid 1px rgba(0, 0, 0, 0.1);
+}
+
+div.dados h4 {
+  margin-left: 100px;
+}
+
+div.colaboradores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  margin: 0 10px 10px 5px;
+}
+
+div.colaborador {
+  background-color: rgba(0, 0, 0, 0.05);
+  width: 250px;
+  padding: 10px;
+  border: 1px solid black;
+}
+
+div.colaborador div.selecionar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
