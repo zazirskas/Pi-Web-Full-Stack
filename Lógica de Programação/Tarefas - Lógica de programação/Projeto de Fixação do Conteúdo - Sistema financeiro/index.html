@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sistema de Controle Financeiro Pessoal</title>
+		<link rel="stylesheet" href="css/header/style.css" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+			integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/body/style.css" />
+    <script src="sistema.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<nav class="">
+				<div class="logo-container">
+					<a href="index.html"
+						><h1>Sistema de controle financeiro pessoal</h1></a
+					>
+				</div>
+				<div class="busca-container">
+					<select name="" id="filtro">
+						<option value="id">Id</option>
+						<option value="descricao">Descrição</option>
+						<option value="tipo">Tipo</option>
+						<option value="categoria">Categoria</option>
+					</select>
+					<div style="display: flex">
+						<label for="busca" class="icon-busca"
+							><i class="fas fa-search"></i
+						></label>
+						<input type="text" class="busca" id="busca" placeholder="Digite sua busca" />
+					</div>
+				</div>
+			</nav>
+		</header>
+		<hr />
+		<main>
+			<form class="cadastrar-gasto">
+				<h2>Cadastrar gasto</h2>
+				<div class="inputs">
+					<div>
+						<input type="text" name="" id="descricao" placeholder="Descrição" />
+					</div>
+					<div>
+						<input type="number" name="" id="valor" placeholder="Valor R$" />
+					</div>
+					<div>
+						<label for="tipo-item">Tipo:</label>
+						<select name="tipo-item" id="tipo">
+							<option value="Receita">Receita</option>
+							<option value="Despesa">Despesa</option>
+						</select>
+					</div>
+					<div>
+						<label for="categoria-item">Categoria:</label>
+						<select name="categoria-item" id="categoria">
+							<option value="Lazer">Lazer</option>
+							<option value="Trabalho">Trabalho</option>
+							<option value="Entretenimento">Entretenimento</option>
+							<option value="Pagamento de Contas">Pagamento de Contas</option>
+							<option value="Investimentos">Investimentos</option>
+						</select>
+					</div>
+				</div>
+				<button type="button" id="insere">Inserir</button>
+			</form>
+			<hr style="margin: 30px 0 0 0" />
+			<div class="painel">
+				<div class="indicadores">
+					<h4 id="saldo-total">Saldo total:</h4>
+					<h4 id="total-receitas">Total de receitas:</h4>
+					<h4 id="total-despesas">Total de despesas:</h4>
+					<h4 id="media-receitas">Média de todas as receitas:</h4>
+					<h4 id="media-despesas">Média de todas as despesas:</h4>
+				</div>
+			</div>
+			<hr />
+			<h2 style="margin-left: 20px">Gastos</h2>
+			<div class="visualizacao" id="visualizacao">
+			</div>
+		</main>
+	</body>
+</html>

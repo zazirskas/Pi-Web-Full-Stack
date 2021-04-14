@@ -1,0 +1,116 @@
+h1 {
+  font-size: 16px;
+}
+
+h2 {
+  color: #585656;
+}
+
+.cadastrar-gasto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0px 0vw;
+}
+
+.inputs {
+  position: relative;
+  height: 100%;
+  width: 50vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.inputs div {
+  width: 250px;
+  margin: 0 20px 10px 0;
+}
+
+.inputs div label {
+  margin-right: 2px;
+}
+
+.inputs div input {
+  height: 20px;
+  width: 100%;
+}
+
+.painel {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.painel .indicadores {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.painel .indicadores h4 {
+  white-space: nowrap;
+}
+
+.visualizacao {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card {
+  background-color: rgba(0, 0, 0, 0.1);
+  border: black 1px solid;
+  width: 250px;
+  padding: 10px;
+  margin: 2px;
+}
+
+.card .descricao-card {
+  width: 100%;
+  margin: 0;
+}
+
+.card h4 {
+  width: 100%;
+  font-size: 14px;
+}
+
+.card h4 span {
+  font-weight: 200;
+}
+
+.card h4 .Receita {
+  color: darkgreen;
+}
+
+.card h4 .Despesa {
+  color: red;
+}
