@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Agendei - Sua agenda pessoal</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			href="https://fonts.googleapis.com/icon?family=Material+Icons"
+			rel="stylesheet"
+		/>
+		<script src="moment.js"></script>
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<div class="header-1">
+				<div class="logo-container">
+					<img
+						src="https://i.pinimg.com/originals/f5/6e/5b/f56e5bbb65b31cedb110ed06591172f4.png"
+						alt=""
+						srcset=""
+						width="100px"
+					/>
+				</div>
+				<div class="nav-container-1">
+					<nav>
+						<a><div class="nav-button">Cadastro</div></a>
+						<a><div class="nav-button">Entrar</div></a>
+					</nav>
+				</div>
+			</div>
+			<div class="nav-container-2">
+				<nav class="sub-nav">
+					<a><div class="sub-nav-div">Home</div></a>
+					<a><div class="sub-nav-div">Agenda</div></a>
+					<a><div class="sub-nav-div">Clientes</div></a>
+					<a><div class="sub-nav-div">Suporte</div></a>
+				</nav>
+			</div>
+		</header>
+		<main>
+			<div class="search-bar">
+				<select name="" id="tipoFiltro" class="filtro">
+					<option value="nome">Nome</option>
+					<option value="id">Id</option>
+					<option value="serviço">Serviço</option>
+					<option value="data">Data</option>
+				</select>
+				<input
+					type="text"
+					name=""
+					id="searchInput"
+					class="search-input"
+					placeholder="Digite sua busca"
+				/>
+			</div>
+			<hr />
+			<div class="system-container" id="systemContainer">
+				<div class="system" id="startMsg">
+					<h1>Bem-vindo ao Agendei!</h1>
+					<p>
+						O Agendei é um sistema de agendamento para manter seus horários e
+						clientes organizados, nossa missão é facilitar sua vida.
+					</p>
+					<button type="" id="startButton" onclick="start()">Continuar</button>
+				</div>
+				<div class="input-flexbox" id="inputContainer">
+					<h3>Agendamento</h3>
+					<div class="input-container">
+						<input type="text" placeholder="Nome" id="nomeAgendamento" />
+						<input type="text" placeholder="Sobrenome" id="sobrenomeAgendamento" />
+						<input type="text" placeholder="Serviço" id="serviçoAgendamento"/>
+						<input type="datetime-local" placeholder="Data agendada" id="dataAgendamento"/>
+					</div>
+					<button class="add-button" id="adicionarButton">Adicionar</button>
+				</div>
+			</div>
+			<hr/>
+			<div class="agendamentos-container" id="agendamentos" style="margin-top: 10px;">
+				<div class="agendamento">
+					<h5>Nome: Thiago Zazirskas dos Reis</h5>
+					<h5>Serviço: </h5>
+					<h5>Data agendada: </h5>
+					<button onclick="" id="editarButton">Editar</button>
+					<button onclick="" id="removerButton">Remover</button>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

@@ -1,0 +1,15 @@
+img {
+  margin: 10px 50px;
+}
+
+.right > li > a {
+  color: black !important;
+}
+
+.tab {
+  border-bottom: 0px solid white;
+}
+
+.tab a {
+  color: black !important;
+}

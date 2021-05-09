@@ -1,0 +1,248 @@
+html body {
+	padding: 0px;
+	margin: 0;
+}
+
+:root {
+	font-size: 16px;
+}
+
+header {
+	overflow: hidden;
+	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+	hr {
+		margin: 0;
+	}
+
+	.header-1 {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+		height: 100px;
+		z-index: 0;
+	}
+
+	div.logo-container {
+		margin-left: 10vw;
+	}
+
+	div.nav-container-1 {
+		margin-left: 60px;
+		margin-right: 10vw;
+
+		nav {
+			position: inherit;
+			display: flex;
+
+			width: 250px;
+
+			a {
+				text-decoration: none;
+			}
+
+			a div {
+				border-radius: 7px;
+				padding: 10px 30px;
+			}
+
+			> a {
+				color: #0475c8;
+				font-weight: 600;
+				margin-right: 20px;
+
+				&:hover {
+					color: #095a94;
+					cursor: pointer;
+				}
+
+				div {
+					border: 2px #0e81c8 solid;
+
+					&:hover {
+						border: 2px #095a94 solid;
+						cursor: pointer;
+					}
+				}
+			}
+
+			> a + a {
+				color: #717171;
+				font-weight: 600;
+
+				&:hover {
+					color: #575757;
+					cursor: pointer;
+				}
+				div {
+					border: 2px #717171 solid;
+
+					&:hover {
+						border: 2px #383838 solid;
+					}
+				}
+			}
+		}
+	}
+
+	.nav-container-2 {
+		position: relative;
+		box-sizing: border-box;
+		display: flex;
+		width: 100%;
+		height: 50px;
+
+		nav.sub-nav {
+			display: flex;
+			justify-content: space-evenly;
+			align-items: center;
+			width: 100%;
+
+			a {
+				text-decoration: none;
+				color: black;
+				
+				&:hover {
+					cursor: pointer;
+				}
+
+				.sub-nav-div {
+					padding: 10px 50px;
+
+					&:active {
+						background-color: #a7a7a73b;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.filtro {
+		margin-bottom: 10px;
+	}
+
+	.logo-container {
+		margin-right: 20px;
+		img {
+			width: 80px;
+		}
+	}
+
+	.nav-container-1 {
+		margin: 0 0 0 0 !important;
+	}
+
+	.nav-button {
+		padding: 7px 10px !important;
+	}
+
+	.search-bar {
+		display: flex;
+		flex-direction: column;
+	}
+
+	input.search-input {
+		width: 250px !important;
+	}
+}
+
+main {
+	div.search-bar {
+		position: relative;
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		justify-content: center;
+		min-width: 320px;
+		margin: 40px 0;
+		width: 100%;
+
+		select {
+			height: 20px;
+			margin-right: 10px;
+		}
+
+		input {
+			width: 50%;
+			height: 40px;
+			border-radius: 5px;
+			border: 1px solid black;
+			padding-left: 10px;
+			font-size: 16px;
+			margin-right: 10px;
+
+			&:focus {
+				outline-width: 0px;
+			}
+		}
+	}
+
+	div.system {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+
+		margin: 110px 10px;
+
+		button {
+			padding: 10px 30px;
+		}
+	}
+}
+
+.system-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 50vh;
+	margin-bottom: initial;
+
+	.input-flexbox {
+		position: relative;
+    margin: 120px;
+		display: none;
+		flex-direction: column;
+		align-items: center;
+    
+    button {
+      padding: 10px 30px;
+    }
+
+		.input-container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			justify-items: center;
+			width: 100%;
+
+
+			input {
+				margin-right: 10px;
+				margin-bottom: 15px;
+				width: 200px;
+				height: 30px;
+			}
+		}
+	}
+}
+
+.agendamentos-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+
+	.agendamento {
+		margin: 5px;
+		border: 1px solid black;
+		border-radius: 5px;
+		padding: 30px;
+	}
+}
+
+.remover {
+	display: inline;
+}
