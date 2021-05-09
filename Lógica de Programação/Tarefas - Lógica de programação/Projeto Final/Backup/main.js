@@ -150,9 +150,9 @@ const carregaDados = (id) => {
 	adicionarButton.onclick = () => editarItem(id);
 
 	const removerButton = document.getElementsByClassName("remover");
-  for (item of removerButton) {
-    item.style.display = 'none';
-  }
+	for (item of removerButton) {
+		item.style.display = "none";
+	}
 };
 
 // Limpa campos
@@ -163,19 +163,51 @@ const limpaCampos = () => {
 	dataAgendamento.value = "";
 };
 
-// Confirma a edição dos itens
+// Confirma a edição dos itens e faz validações nos novos dados inseridos
 const editarItem = (id) => {
 	const elemento = listaAgendamentos.find(
 		(agendamento) => agendamento.id === id
 	);
-  elemento.id === id
-	elemento.nome = nomeAgendamento.value;
-	elemento.sobrenome = sobrenomeAgendamento.value;
-  elemento.nomeCompleto = elemento.nome + " " + elemento.sobrenome;
-	elemento.serviço = serviçoAgendamento.value;
-	elemento.dataOriginal = dataAgendamento.value;
-	(elemento.data = moment(dataAgendamento.value).format("LLL")),
-		atualizaLista();
+
+	elemento.id === id;
+
+	if (!nomeAgendamento.value) {
+		return alert("Não foi inserido um nome, insira um nome");
+	} else {
+		if (validaTexto(nomeAgendamento.value) === true) {
+			return alert("Nome inserido inválido, o nome só pode conter texto!");
+		}
+		elemento.nome = nomeAgendamento.value;
+	}
+	if (!sobrenomeAgendamento.value) {
+		return alert("Não foi inserido um sobrenome, insira um sobrenome");
+	} else {
+		if (validaTexto(sobrenomeAgendamento.value) === true) {
+			return alert(
+				"Sobrenome inserido inválido, o sobrenome só pode conter texto!"
+			);
+		}
+		elemento.sobrenome = sobrenomeAgendamento.value;
+		elemento.nomeCompleto = elemento.nome + " " + elemento.sobrenome;
+	}
+	if (!serviçoAgendamento.value) {
+		return alert("Não foi inserido um serviço, insira um serviço");
+	} else {
+		elemento.serviço = serviçoAgendamento.value;
+	}
+	if (!dataAgendamento.value) {
+		return alert("Não foi inserido uma data, insira uma data");
+	} else {
+		if (validaData(dataAgendamento.value) === true) {
+			return alert(
+				"Nào é possivel alterar um agendamento para o passado, favor inserir uma data futura"
+			);
+		}
+		elemento.dataOriginal = dataAgendamento.value;
+		elemento.data = moment(dataAgendamento.value).format("LLL");
+	}
+
+	atualizaLista();
 	limpaCampos();
 
 	adicionarButton.innerText = "Adicionar";
@@ -200,7 +232,9 @@ const validaData = (data) => {
 	const horaAgendamento = moment(data).format("LT");
 	const hora = moment().format("LT");
 	const hoje = moment().format("L");
-	if (dataAgendamento < hoje || horaAgendamento < hora) {
+	if (dataAgendamento < hoje) {
+		return true;
+	} else if (dataAgendamento === hoje && horaAgendamento < hora) {
 		return true;
 	}
 };
