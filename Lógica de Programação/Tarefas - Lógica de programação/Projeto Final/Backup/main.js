@@ -177,8 +177,10 @@ const editarItem = (id) => {
 		if (validaTexto(nomeAgendamento.value) === true) {
 			return alert("Nome inserido inválido, o nome só pode conter texto!");
 		}
+
 		elemento.nome = nomeAgendamento.value;
 	}
+
 	if (!sobrenomeAgendamento.value) {
 		return alert("Não foi inserido um sobrenome, insira um sobrenome");
 	} else {
@@ -187,14 +189,17 @@ const editarItem = (id) => {
 				"Sobrenome inserido inválido, o sobrenome só pode conter texto!"
 			);
 		}
+
 		elemento.sobrenome = sobrenomeAgendamento.value;
 		elemento.nomeCompleto = elemento.nome + " " + elemento.sobrenome;
 	}
+
 	if (!serviçoAgendamento.value) {
 		return alert("Não foi inserido um serviço, insira um serviço");
 	} else {
 		elemento.serviço = serviçoAgendamento.value;
 	}
+
 	if (!dataAgendamento.value) {
 		return alert("Não foi inserido uma data, insira uma data");
 	} else {
@@ -203,6 +208,7 @@ const editarItem = (id) => {
 				"Nào é possivel alterar um agendamento para o passado, favor inserir uma data futura"
 			);
 		}
+
 		elemento.dataOriginal = dataAgendamento.value;
 		elemento.data = moment(dataAgendamento.value).format("LLL");
 	}
