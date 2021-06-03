@@ -35,16 +35,16 @@ class Estoque {
     return this.listaProdutos
   }
 
-  mostrarEstoque() {
+  mostrarEstoqueAExportar() {
     let item;
     for (item of this.listaProdutos) {
       if (item.produtor) {
-        console.log(`Nome: ${item.nome} Quantidade: ${item.quantidade} Preço: R$${parseInt(item.preco).toFixed(2)} Produtor: ${item.produtor}`);
+        console.log(`Nome: ${item.nome} Quantidade: ${item.quantidade} Preço: R$${parseFloat(item.preco).toFixed(2)} Produtor: ${item.produtor}`);
       } else if (item.fabricante) {
-        console.log(`Nome: ${item.nome} Quantidade: ${item.quantidade} Preço: R$${parseInt(item.preco).toFixed(2)} Fabricante: ${item.fabricante}`);
+        console.log(`Nome: ${item.nome} Quantidade: ${item.quantidade} Preço: R$${parseFloat (item.preco).toFixed(2)} Fabricante: ${item.fabricante}`);
       }
     }
-    console.log('---- Fim estoque ----');
+    console.log('---- Fim relatório de inclusão ----');  
   }
 }
 

@@ -1,1 +1,1 @@
-{"EstoqueMercearia":[{"Nome":"Aveia","Quantidade":6,"Preço":"30.00","Fabricante":"Quaker"},{"Nome":"Ketchup","Quantidade":1,"Preço":"10.00","Fabricante":"Heinz"}],"EstoqueHortiFruti":[{"Nome":"Banana","Quantidade":"4","Preço":"5.00","Produtor":"Terra"}]}
+{"EstoqueMercearia":[{"Nome":"Aveia","Quantidade":3,"Preço":"30.00","Fabricante":"Quaker"}],"EstoqueHortiFruti":[{"Nome":"Banana","Quantidade":"4","Preço":"5.00","Produtor":"Terra"},{"Nome":"pera","Quantidade":"10","Preço":"2.00","Produtor":"Pereira"}]}
