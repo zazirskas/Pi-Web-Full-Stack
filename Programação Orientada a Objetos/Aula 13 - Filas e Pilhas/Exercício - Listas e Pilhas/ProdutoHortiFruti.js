@@ -1,25 +1,25 @@
 const Produto = require('./Produto')
 
 class ProdutoHortiFruti extends Produto {
-  constructor(nome, quantidade, preco, produtor) {
-    super(nome, quantidade, preco)
-    let _produtor = produtor;
+  constructor(Nome, Quantidade, Preco, Produtor) {
+    super(Nome, Quantidade, Preco)
+    let _produtor = Produtor;
 
     this.getProdutor = () => {
       return _produtor;
     }
 
-    this.setProdutor = (produtor) => {
-      return _produtor = produtor;
+    this.setProdutor = (Produtor) => {
+      return _produtor = Produtor;
     }
   }
 
-  get produtor() {
+  get Produtor() {
     return this.getProdutor();
   }
 
-  set produtor(produtor) {
-    return this.setProdutor(produtor);
+  set Produtor(Produtor) {
+    return this.setProdutor(Produtor);
   }
 }
 

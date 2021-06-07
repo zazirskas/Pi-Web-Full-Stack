@@ -1,56 +1,56 @@
 class Produto {
-  constructor(nome, quantidade, preco) {
-    let _nome = nome;
-    let _quantidade = quantidade;
-    let _preco = preco;
+  constructor(Nome, Quantidade, Preco) {
+    let _nome = Nome;
+    let _quantidade = Quantidade;
+    let _preco = Preco;
 
     this.getNome = () => {
       return _nome;
     }
 
-    this.setNome = (nome) => {
-      return _nome = nome;
+    this.setNome = (Nome) => {
+      return _nome = Nome;
     }
 
     this.getQuantidade = () => {
       return _quantidade;
     }
 
-    this.setQuantidade = (quantidade) => {
-      return _quantidade = quantidade;
+    this.setQuantidade = (Quantidade) => {
+      return _quantidade = Quantidade;
     }
     
     this.getPreco = () => {
       return _preco;
     }
 
-    this.setPreco = (preco) => {
-      return _preco = preco;
+    this.setPreco = (Preco) => {
+      return _preco = Preco;
     }
   }
 
-  get nome() {
+  get Nome() {
     return this.getNome();
   }
 
-  set nome(nome) {
-    return this.setNome(nome);
+  set Nome(Nome) {
+    return this.setNome(Nome);
   }
 
-  get quantidade() {
+  get Quantidade() {
     return this.getQuantidade();
   }
 
-  set quantidade(quantidade) {
-    return this.setQuantidade(quantidade);
+  set Quantidade(Quantidade) {
+    return this.setQuantidade(Quantidade);
   }
 
-  get preco() {
+  get Preco() {
     return this.getPreco();
   }
 
-  set preco(preco) {
-    return this.setPreco(preco);
+  set Preco(Preco) {
+    return this.setPreco(Preco);
   }
 }
 

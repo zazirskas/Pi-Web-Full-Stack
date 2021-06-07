@@ -1,17 +1,17 @@
 const Produto = require('./Produto')
 
 class ProdutoMercearia extends Produto {
-  constructor(nome, quantidade, preco, fabricante, dataValidade = "31/12/2021") {
-    super(nome, quantidade, preco);
-    let _fabricante = fabricante;
+  constructor(Nome, Quantidade, Preco, Fabricante, dataValidade = "31/12/2021") {
+    super(Nome, Quantidade, Preco);
+    let _fabricante = Fabricante;
     let _dataValidade = dataValidade;
-    
+
     this.getFabricante = () => {
       return _fabricante;
     }
 
-    this.setFabricante = (fabricante) => {
-      return _fabricante = fabricante;
+    this.setFabricante = (Fabricante) => {
+      return _fabricante = Fabricante;
     }
 
     this.getDataValidade = () => {
@@ -23,12 +23,12 @@ class ProdutoMercearia extends Produto {
     }
   }
 
-  get fabricante() {
+  get Fabricante() {
     return this.getFabricante();
   }
 
-  set fabricante(fabricante) {
-    return this.setFabricante(fabricante);
+  set Fabricante(Fabricante) {
+    return this.setFabricante(Fabricante);
   }
 
   get dataValidade() {

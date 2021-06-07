@@ -1,6 +1,7 @@
 const input = require('readline-sync');
+const Estoque = require('./Estoque');
 const {lerEstoque, exportarEstoque} = require('./funcionalidades');   
- 
+
 class Venda {
   constructor(EstoqueMercearia = [], EstoqueHortiFruti = []) {
     this.EstoqueMercearia = EstoqueMercearia;
@@ -12,17 +13,20 @@ class Venda {
     let item;
 
     for (item of this.EstoqueMercearia) {
-      console.log(`Nome: ${item.Nome} Quantidade: ${item.Quantidade} Preço: ${item.Preço} Fabricante: ${item.Fabricante}`);
+      console.log(`Nome: ${item.Nome} Quantidade: ${item.Quantidade} Preço: ${item.Preco} Fabricante: ${item.Fabricante}`);
     }
     console.log('\n')
     console.log('-----Itens de Horti-Fruti-----');
     for (item of this.EstoqueHortiFruti) {
-      console.log(`Nome: ${item.Nome} Quantidade: ${item.Quantidade} Preço: ${item.Preço} Produtor: ${item.Produtor}`);
+      console.log(`Nome: ${item.Nome} Quantidade: ${item.Quantidade} Preço: ${item.Preco} Produtor: ${item.Produtor}`);
     }
     console.log('\n');
   }
 
   realizarVenda() {
+
+    let quantidade;
+
     console.log('-----Estoque disponível para venda-----\n');
 
     this.adicionarProdutos();
@@ -52,7 +56,7 @@ class Venda {
     if (indiceItemMercearia > -1) {
       console.log(`\n ${this.EstoqueMercearia[indiceItemMercearia].Nome} foi selecionado`);
 
-      let quantidade = input.question(`Insira a quantidade de ${this.EstoqueMercearia[indiceItemMercearia].Nome} que deseja comprar: `);
+      quantidade = input.question(`Insira a quantidade de ${this.EstoqueMercearia[indiceItemMercearia].Nome} que deseja comprar: `);
       
       while (quantidade > this.EstoqueMercearia[indiceItemMercearia].Quantidade) {
         quantidade = input.question('Não há itens o suficiente, insira uma quantidade válida: ');
@@ -81,9 +85,9 @@ class Venda {
       }
     }
 
-    exportarEstoque({EstoqueMercearia: this.EstoqueMercearia, EstoqueHortiFruti: this.EstoqueHortiFruti});
-
     console.log('Compra finalizada, volte sempre!');
+
+    return {EstoqueHortiFruti: this.EstoqueHortiFruti, EstoqueMercearia: this.EstoqueMercearia}
   }
 }
 

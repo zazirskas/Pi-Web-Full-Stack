@@ -4,26 +4,27 @@ const ProdutoMercearia = require(`./ProdutoMercearia`);
 const Estoque = require(`./Estoque`);
 const Venda = require('./Venda');
 const input = require(`readline-sync`);
-const {lerEstoque, exportarEstoque} = require('./funcionalidades')
+const {lerDB, escreverDB} = require('./funcionalidades')
 
 const estoqueHortiFruti = new Estoque();
 const estoqueMercearia = new Estoque();
+const estoqueGeral = new Estoque();
 
 let opcao, opcao2, nome, quantidade, preco, fornecedor;
 
 console.log('Bem vindo ao sistema de estoque!');
 
 const mostrarItensEstoque = () => {
-  let estoque = lerEstoque();
+  let estoque = lerDB();
 
   console.log('-----Itens de Mercearia-----');
   for (item of estoque.EstoqueMercearia) {
-    console.log(`Nome: ${item.Nome} Quantidade: ${item.Quantidade} Preço: ${item.Preço} Fabricante: ${item.Fabricante}`);
+    console.log(`Nome: ${item.Nome} Quantidade: ${item.Quantidade} Preço: ${item.Preco} Fabricante: ${item.Fabricante}`);
   }
   console.log('\n')
   console.log('-----Itens de Horti-Fruti-----');
   for (item of estoque.EstoqueHortiFruti) {
-    console.log(`Nome: ${item.Nome} Quantidade: ${item.Quantidade} Preço: ${item.Preço} Produtor: ${item.Produtor}`);
+    console.log(`Nome: ${item.Nome} Quantidade: ${item.Quantidade} Preço: ${item.Preco} Produtor: ${item.Produtor}`);
   }
   console.log('\n');
 }
@@ -80,46 +81,31 @@ while (opcao != 0) {
     console.log('2 - Remove produto ao Estoque de Mercearia');
 
     opcao2 = input.question('Insira a opção desejada: ');
-
+    let estoque = lerDB();
     console.log('--------------');
 
     if (opcao2 == 1) {
-      estoqueHortiFruti.removerProduto();
+      estoqueHortiFruti.removerProduto(opcao2);
       console.log('Estoque de Horti Fruti atualizado');
-      estoqueHortiFruti.mostrarEstoque();
+      estoqueHortiFruti.mostrarEstoqueAExportar();
 
     } else if (opcao2 == 2) {
-      estoqueMercearia.removerProduto();
+      estoqueMercearia.removerProduto(opcao2);
       console.log('Estoque de Mercearia atualizado');
-      estoqueMercearia.mostrarEstoque();
+      estoqueMercearia.mostrarEstoqueAExportar();
     }
   } else if (opcao == 3) {
-    
-    console.log('--------------');
-    let estoques = lerEstoque();
 
-    const EstoqueMercearia = estoques.EstoqueMercearia;
-    const EstoqueHortiFruti = estoques.EstoqueHortiFruti;
-    
-    for (item of estoqueMercearia.listaProdutos) {
-      const novoItem = {Nome: item.nome, Quantidade: item.quantidade, Preço: parseFloat(item.preco).toFixed(2), Fabricante: item.fabricante}
-      EstoqueMercearia.push(novoItem);
-    }
-    
-    for (item of estoqueHortiFruti.listaProdutos) {
-      const novoItem = {Nome: item.nome, Quantidade: item.quantidade, Preço: parseFloat(item.preco).toFixed(2), Produtor: item.produtor}
-      EstoqueHortiFruti.push(novoItem);
-    }
-    
-    exportarEstoque({EstoqueMercearia: EstoqueMercearia, EstoqueHortiFruti: EstoqueHortiFruti});
-    console.log('Estoques exportados com sucesso!'); 
+    estoqueGeral.exportarEstoque(estoqueMercearia.listaProdutos, estoqueHortiFruti.listaProdutos);
 
   } else if (opcao == 4) {
-    let estoque = lerEstoque();
+    let estoque = lerDB();
 
-    const venda = new Venda(estoque.EstoqueMercearia, estoque.EstoqueHortiFruti);
+    let venda = new Venda(estoque.EstoqueMercearia, estoque.EstoqueHortiFruti);
 
-    venda.realizarVenda();
+    const objVenda = venda.realizarVenda();
+
+    estoqueGeral.atualizarEstoque(objVenda.EstoqueMercearia, objVenda.EstoqueHortiFruti);
 
   } else if (opcao == 5) {
     mostrarItensEstoque();
