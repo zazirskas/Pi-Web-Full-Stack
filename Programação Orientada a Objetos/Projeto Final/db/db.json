@@ -1,0 +1,1 @@
+{"Clinica":[{"nome":"Teste","usuario":"teste","senha":"123","tipo":1},{"nome":"Teste2","usuario":"teste2","senha":"123","especialidade":"Pediatria","agenda":["2021-12-31T15:00:00.000Z","2021-12-31T15:31:00.000Z","2021-03-02T15:00:00.000Z"],"tipo":2},{"nome":"Teste3","usuario":"Teste3","senha":"123","especialidade":"Oncologia","agenda":[],"tipo":2}]}
