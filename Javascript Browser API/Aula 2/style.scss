@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  justify-content: center;
+
+  .box-1 {
+    width: 300px;
+    height: 200px;
+    background-color: #B60074;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .box-1-text {
+      color: white;
+    };
+  };
+};
+
+.modified-container {
+  display: flex;
+  flex-direction: column;
+  height: 97vh;
+
+  .modified-box-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 20vw;
+    background-color: #03FEFF;
+    
+    .modified-box-1-text {
+      margin: 10px;
+      font-size: 28px;
+      color: #FF1B3C;
+      text-align: center;
+    };
+  };
+};
