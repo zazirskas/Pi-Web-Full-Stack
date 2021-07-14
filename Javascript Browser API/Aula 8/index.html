@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+			integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+			crossorigin="anonymous"
+		/>
+    <script src="main.js" defer></script>
+	</head>
+	<body>
+		<div class="container-all">
+			<div class="container-pokemons">
+				<div class="pokemon moltres">
+					<h3>Moltres</h3>
+					<img src="images/0952d801dfe2365b37bf4ec3f38e8c1d.png" alt="" />
+					<p>HP: ___</p>
+					<p>Ataque: ___</p>
+					<p>Defesa: ___</p>
+					<p>Ataque Especial: ___</p>
+					<p>Defesa Especial: ___</p>
+					<p>Velocidade: ___</p>
+				</div>
+				<div class="pokemon articuno">
+					<h3>Articuno</h3>
+					<img src="images/144.png" alt="" />
+					<p>HP: ___</p>
+					<p>Ataque: ___</p>
+					<p>Defesa: ___</p>
+					<p>Ataque Especial: ___</p>
+					<p>Defesa Especial: ___</p>
+					<p>Velocidade: ___</p>
+				</div>
+				<div class="pokemon zapdos">
+					<h3>Zapdos</h3>
+					<img
+						src="images/201-2015027_zapdos-best-bird-moltres-pokemon-legendary-birds-zapdos.png"
+						alt=""
+					/>
+					<p>HP: ___</p>
+					<p>Ataque: ___</p>
+					<p>Defesa: ___</p>
+					<p>Ataque Especial: ___</p>
+					<p>Defesa Especial: ___</p>
+					<p>Velocidade: ___</p>
+				</div>
+			</div>
+			<div class="container-comparacao">
+				<div class="container-tipo">
+					<label for="select-tipo"></label>
+					<i class="fas fa-chevron-down" id="chevron-tipo"></i>
+					<input
+						type="text"
+						id="select-tipo"
+						class="select-default"
+						readonly
+						value=""
+					/>
+					<div class="option-lista" id="optionLista">
+						<option value="ataque" id="optionAtaque">Ataque</option>
+						<option value="defesa" id="optionDefesa">
+							Defesa
+						</option>
+						<option value="ataque especial" id="optionAtaqueEspecial">Ataque Especial</option>
+						<option value="defesaEspecial" id="optionDefesaEspecial">
+							Defesa Especial
+						</option>
+						<option value="velocidade" id="velocidade">
+							Velocidade
+						</option>
+					</div>
+				</div>
+        <button class="botao" type="button" id="botao">COMPARAR!</button>
+			</div>
+		</div>
+	</body>
+</html>

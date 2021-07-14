@@ -1,0 +1,175 @@
+.container-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container-all .container-pokemons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+}
+
+.container-all .container-pokemons .pokemon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25%;
+  min-width: 210px;
+  border-radius: 10px;
+}
+
+.container-all .container-pokemons .pokemon img {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  max-width: 200px;
+  max-height: 180px;
+}
+
+.container-all .container-pokemons .perdedor {
+  background-color: transparent !important;
+}
+
+.container-all .container-pokemons .perdedor p, .container-all .container-pokemons .perdedor h3 {
+  color: #969696;
+}
+
+.container-all .container-pokemons .moltres {
+  background-color: #ffecec;
+}
+
+.container-all .container-pokemons .articuno {
+  background-color: #ebfaff;
+}
+
+.container-all .container-pokemons .zapdos {
+  background-color: #fff4cf;
+}
+
+.container-comparacao {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 50px;
+}
+
+.container-comparacao .container-tipo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.container-comparacao .container-tipo .select {
+  cursor: pointer;
+}
+
+.container-comparacao .container-tipo input {
+  width: 140px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  background-color: #FBFBFB;
+  outline: none;
+  cursor: pointer;
+  padding-left: 10px !important;
+}
+
+.container-comparacao .container-tipo i {
+  position: absolute;
+  top: 11px;
+  left: 130px;
+  pointer-events: none;
+}
+
+.container-comparacao .container-tipo .fa-chevron-down {
+  color: #BC0000;
+}
+
+.container-comparacao .container-tipo .fa-chevron-up {
+  color: #BC0000;
+}
+
+.container-comparacao .container-tipo .option-lista {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  background-color: #FBFBFB;
+  border: 1px solid #BC0000;
+  padding: 10px 10px 0px 10px;
+  overflow: visible;
+}
+
+.container-comparacao .container-tipo .option-lista option {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.container-comparacao .container-tipo .option-lista option:hover {
+  background-color: #aaaaaa;
+}
+
+.container-comparacao .container-tipo .select-default {
+  padding: 10px 0px;
+  border: 1px solid #BC0000;
+}
+
+.container-comparacao .container-tipo .select-focus {
+  padding: 15px 0px;
+  border: 0px solid;
+  background-color: #BC0000;
+}
+
+.container-comparacao .container-tipo > label {
+  margin-bottom: 10px;
+}
+
+.container-comparacao .botao {
+  pointer-events: none;
+  color: #FFFFFF;
+  background-color: #FFA2A2;
+  border: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-weight: 800;
+  height: 37px;
+  width: 120px;
+  margin-left: 2px;
+}
+
+.container-comparacao .botao-active {
+  cursor: pointer;
+  color: #FFFFFF;
+  background-color: #BC0000;
+  border: 0px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-weight: 800;
+  height: 37px;
+  width: 120px;
+  margin-left: 2px;
+}

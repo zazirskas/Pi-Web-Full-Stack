@@ -1,0 +1,153 @@
+.container-all {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	.container-pokemons {
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+
+		.pokemon {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			width: 25%;
+      min-width: 210px;
+      border-radius: 10px;
+
+			img {
+				flex-grow: 1;
+				max-width: 200px;
+				max-height: 180px;
+			}
+		}
+
+    .perdedor {
+      background-color: transparent !important;
+      
+      p, h3 {
+        color: #969696;
+      };
+    };
+
+		.moltres {
+			background-color: #ffecec;
+		}
+
+		.articuno {
+			background-color: #ebfaff;
+		}
+
+		.zapdos {
+			background-color: #fff4cf;
+		}
+	}
+}
+
+.container-comparacao {
+  display: flex;
+  align-items: center;
+
+  margin-top: 50px;
+
+	.container-tipo {
+		position: relative;
+		display: flex;
+
+		.select {
+			cursor: pointer;
+		}
+
+		input {
+			width: 140px;
+			border-top-left-radius: 5px;
+			border-bottom-left-radius: 5px;
+			background-color: #FBFBFB;
+			outline: none;
+			cursor: pointer;
+			padding-left: 10px !important;
+		}
+
+		i {
+			position: absolute;
+			top: 11px;
+			left: 130px;
+			pointer-events: none;
+		}
+
+		.fa-chevron-down {
+			color: #BC0000;
+		}
+
+		.fa-chevron-up {
+			color: #BC0000;
+		}
+
+		.option-lista {
+			display: none;
+			position: absolute;
+			top: 50px;
+			left: 10px;
+			background-color: #FBFBFB;
+			border: 1px solid #BC0000;
+			padding: 10px 10px 0px 10px;
+			overflow: visible;
+
+			option {
+				margin-bottom: 10px;
+				cursor: pointer;
+
+				&:hover {
+					background-color: #aaaaaa;
+				}
+			}
+		}
+
+		.select-default {
+			padding: 10px 0px;
+			border: 1px solid #BC0000;
+		}
+
+		.select-focus {
+			padding: 15px 0px;
+			border: 0px solid;
+			background-color: #BC0000;
+		}
+
+		& > label {
+			margin-bottom: 10px;
+		}
+	}
+
+	.botao {
+    pointer-events: none;
+    color: #FFFFFF;
+    background-color: #FFA2A2;
+    border: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-weight: 800;
+
+
+		height: 37px;
+    width: 120px;
+    margin-left: 2px;
+	}
+
+  .botao-active {
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #BC0000;
+    border: 0px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-weight: 800;
+
+
+		height: 37px;
+    width: 120px;
+    margin-left: 2px;
+	}
+}

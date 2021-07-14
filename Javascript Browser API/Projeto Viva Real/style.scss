@@ -1,0 +1,483 @@
+* {
+	padding: 0;
+	margin: 0;
+	vertical-align: baseline;
+	list-style: none;
+	border: 0;
+	text-decoration: none;
+	font-family: sans-serif;
+}
+
+.container-nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+
+	height: 7vh;
+	background-color: #1190cd;
+
+	a {
+		color: white;
+		font-size: 12px;
+		font-family: sans-serif;
+	}
+
+	img {
+		width: 15vh;
+	}
+
+	li {
+		display: inline-block;
+		margin: auto 10px;
+	}
+}
+
+.main-container {
+	margin: 5vh auto;
+	height: auto;
+	display: flex;
+
+	.container-main-search {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		margin-left: 35px;
+
+		.container-search-box-1 {
+			display: flex;
+			flex-direction: column;
+			justify-items: flex-start;
+
+			border: 1px solid #ffb800;
+
+			height: 60vh;
+			width: 15vw;
+			padding: 2px 15px;
+			background-color: #ffda79;
+
+			:first-child {
+				margin-bottom: 10px;
+				color: #8c744e;
+				font-size: 12px;
+				font-family: sans-serif;
+			}
+
+			p {
+				font-size: 13px;
+			}
+
+			select {
+				color: #948f95;
+				padding: 5px;
+				height: 40px;
+				border-radius: 2px;
+				box-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.1);
+			}
+
+			label {
+				margin: 10px 0;
+				color: #8c744e;
+				font-size: 12px;
+				font-family: sans-serif;
+			}
+
+			input {
+				padding: 5px;
+				height: 30px;
+				border-radius: 2px;
+				box-shadow: 1px 1px 1px rgba($color: #000000, $alpha: 0.1);
+			}
+
+			.container-switch {
+				display: flex;
+				align-items: center;
+
+				p {
+					margin-left: 10px;
+				}
+			}
+
+			.container-price-filter {
+				display: flex;
+				align-content: center;
+				justify-content: space-between;
+
+				.price {
+					box-sizing: border-box;
+					display: flex;
+					flex-direction: column;
+					margin: 0;
+					width: 100px;
+					height: 80px;
+
+					label {
+						margin-bottom: 10px;
+					}
+
+					input {
+						width: 90px;
+						height: 30px;
+					}
+				}
+			}
+		}
+
+		.container-round-selector {
+			display: flex;
+			justify-content: space-between;
+
+			.round-selector {
+				background-color: #fff;
+				border-radius: 50px;
+
+				padding: 7px;
+				width: 20px;
+
+				color: #948f95;
+				font-size: 12px;
+				margin-bottom: 1px;
+			}
+		}
+
+		.container-search-box-2 {
+			border: solid 1px rgba(0, 0, 0, 0.2);
+			display: flex;
+			flex-direction: column;
+			width: 15vw;
+			margin-top: 20px;
+			height: auto;
+			padding: 10px 15px;
+
+			.container-area-filter {
+				display: flex;
+
+				.area {
+					label {
+						font-size: 10px;
+						color: #948f95;
+					}
+
+					input {
+						border: 1px solid rgba(0, 0, 0, 0.2);
+						width: 90px;
+						height: 30px;
+						padding: 5px;
+					}
+				}
+			}
+
+			label {
+				margin: 10px 0;
+				font-size: 12px;
+				color: #948f95;
+			}
+
+			.round-selector {
+				background-color: #fff;
+				border-radius: 50px;
+
+				padding: 7px;
+				width: 20px;
+
+				border: 1px solid rgba(0, 0, 0, 0.2);
+				color: #948f95;
+				font-size: 12px;
+				margin-bottom: 1px;
+			}
+		}
+	}
+
+	.container-main-results {
+		width: 75vw;
+		margin-left: 20px;
+		margin-top: 10px;
+
+		.container-main-results-categories {
+			padding-bottom: 10px;
+			border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+			li {
+				margin-left: 25px;
+				display: inline-block;
+				margin-right: 25px;
+				font-size: 12px;
+
+				a {
+					color: #0096d8;
+				}
+			}
+		}
+
+		.container-main-results-quantity {
+			.city-tag {
+				border: 1px solid #0096d8;
+				color: #0096d8;
+				font-size: 12px;
+				padding: 5px;
+				border-radius: 100000px;
+				text-align: center;
+			}
+		}
+
+		.container-main-results-findings {
+      display: flex;
+      flex-direction: column;
+      
+			.estate-card {
+        margin-top: 20px;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+        border-radius: 2px;
+        box-sizing: content-box;
+        height: 254px;
+        display: flex;
+
+				.estate-card-image-container {
+
+					img {
+						width: 350px;
+            height: 254px;
+					}
+				}
+
+        .estate-card-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between ;
+          margin: 15px 0 0 15px;
+          width: 100%;
+
+          .estate-card-info {
+            div {
+              margin-bottom: 10px;
+            }
+  
+            .estate-adress-container {
+              span {
+                font-size: 12px;
+                color: #969696;
+              }
+            }
+  
+            .estate-description-container {
+              span {
+                font-weight: 400;
+              }
+            }
+  
+            .estate-specification-container {
+              p {
+                font-size: 12px;
+              }
+            }
+  
+            .estate-feature-container {
+              span {
+                margin-right: 5px;
+                border-radius: 1000000px;
+                background-color: #EBEBEB;
+                padding: 5px;
+                font-size: 12px;
+                color: #ADAEB1;
+              }
+            }
+          }
+          
+          .estate-card-info-2 {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .estate-card-price-container {
+              height: 40px;
+              margin-bottom: 20px;
+            }
+          }
+        }
+			}
+		}
+	}
+}
+
+
+
+
+/* The switch - the box around the slider */
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 30px;
+	height: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+/* The slider */
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 21px;
+	width: 20px;
+	left: 0px;
+	bottom: 0px;
+	background-color: white;
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: #2196f3;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(12px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+
+  .footer-services-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #005883;
+
+
+    .footer-services-section {
+      display: flex;
+      flex-direction: column;
+      width: 310px;
+
+      &:first-child {
+        padding-left: 20px;
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+      }
+
+      &:nth-child(2) {
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+      }
+
+      &:nth-child(3) {
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+      }
+
+      &:nth-child(4) {
+
+        div {
+          display: flex;
+          flex-direction: column;
+
+          &:nth-child(2) {
+            display: flex;
+
+            div {
+              margin-top: 2px;
+              display: flex;
+              flex-direction: row;
+
+              i {
+                margin-right: 7px;
+                color: #fff;
+                font-size: 30px;
+              }
+            }
+          }
+
+          &:nth-child(3) {
+            margin-top: 10px;
+            div {
+              display: flex;
+              flex-direction: row;
+
+              img {
+                width: 100px;
+                height: 50px;
+              }
+            }
+          }
+        }
+      }
+
+      span {
+        color: #73A0B2;
+        font-size: 12px;
+      }
+
+      a {
+        margin: 10px 0;
+        color: #fff;
+        font-size: 12px;
+      }
+    }
+  }
+
+  .footer-company-info {
+    display: flex;
+    background-color: #064F6F;
+    align-items: center;
+    justify-content: space-between;
+
+    .group-logo-container {
+      margin-left: 30px;
+
+      img {
+        width: 146px;
+        height: 47px;
+      }
+    }
+
+    .copyright-container {
+      color: #8CA8B9;
+      font-size: 13px;
+      text-align: left;
+      width: 600px;
+      margin-left: 10px;
+    }
+
+    .policies-container {
+      margin-right: 30px;
+
+      li {
+        display: inline-block;
+        font-size: 12px;
+        margin-right: 10px;
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

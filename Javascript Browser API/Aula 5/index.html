@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+			integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+			crossorigin="anonymous"
+		/>
+		<script src="main.js" defer></script>
+		<title>Registro de despesas</title>
+	</head>
+	<body>
+		<div class="container-system">
+			<div class="container-registro">
+				<div class="container-descricao-despesa">
+					<label for="descricao-da-despesa">Descrição da despesa</label>
+					<input
+						type="text"
+						name=""
+						id="descricao-da-despesa"
+						class="input-default"
+					/>
+				</div>
+				<div class="container-tipo">
+					<label for="select-tipo">Tipo</label>
+					<i class="fas fa-chevron-down" id="chevron-tipo"></i>
+					<input
+						type="text"
+						id="select-tipo"
+						class="select-default"
+						readonly
+						value=""
+					/>
+					<div class="option-lista" id="optionLista">
+						<option value="Lazer" id="optionLazer">Lazer</option>
+						<option value="Gasto recorrentes" id="optionGasto">
+							Gasto recorrentes
+						</option>
+						<option value="Contas" id="optionContas">Contas</option>
+						<option value="Alimentação" id="optionAlimentacao">
+							Alimentação
+						</option>
+					</div>
+				</div>
+				<div class="container-botao">
+					<button type="button" class="botao">REGISTRAR</button>
+				</div>
+			</div>
+			<div class="container-tabela">
+				<table id="tabela-gastos">
+					<tr>
+						<th>Descrição</th>
+						<th>Tipo</th>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>

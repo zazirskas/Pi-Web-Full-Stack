@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Viva Real</title>
+		<link rel="stylesheet" href="style.css" />
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+			integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+			crossorigin="anonymous"
+		/>
+		<script src="main.js" defer></script>
+	</head>
+	<body>
+		<header>
+			<nav class="container-nav">
+				<div class="container-logo">
+					<a href=""
+						><img
+							src="https://cdn1.vivareal.com/p/15151-095e6d376/v/static/app/svg/styleguide/logo/vivareal-5bcdffca.svg"
+							alt=""
+					/></a>
+				</div>
+				<div class="container-links">
+					<ul>
+						<li><a href="">COMPRAR</a></li>
+						<li><a href="">ALUGAR</a></li>
+						<li><a href="">IMÓVEIS NOVOS</a></li>
+						<li><a href="">SELEÇÃO VIVA REAL</a></li>
+						<li><a href="">DESCOBRIR</a></li>
+						<li><a href="">FINANCIAMENTO</a></li>
+					</ul>
+				</div>
+				<div class="container-services">
+					<ul>
+						<li><a href="">ANUNCIAR IMÓVEIS</a></li>
+						<li><a href="">ENTRAR</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<div class="main-container">
+				<div class="container-main-search">
+					<div class="container-search-box-1">
+						<label for="city-input" autocomplete="on">LOCALIZAÇÃO DO IMÓVEL</label>
+						<input
+							type="text"
+							name=""
+							id="city-input"
+							placeholder="Digite uma rua, bairro ou cidade"
+						/>
+						<br />
+						<p id="searched-city"></p>
+						<label>IMÓVEL COM</label>
+						<div class="container-switch">
+							<label class="switch">
+								<input type="checkbox" />
+								<span class="slider round"></span>
+							</label>
+							<p>Tour Virtual ou Vídeos</p>
+						</div>
+						<label for="">TIPO DE IMÓVEL</label>
+						<select name="" id="">
+							<option value="" disabled selected>Mostrar todos</option>
+						</select>
+						<div class="container-price-filter">
+							<div class="price">
+								<label for="price-min">PREÇO MÍNIMO</label>
+								<input type="number" name="" id="price-min" placeholder="R$" />
+							</div>
+							<div class="price">
+								<label for="price-max">PREÇO MÁXIMO</label>
+								<input
+									type="number"
+									name=""
+									id="price-max"
+									placeholder="R$ ilimitado"
+								/>
+							</div>
+						</div>
+						<label for="">NÚMERO DE QUARTOS</label>
+						<div class="container-round-selector">
+							<span class="round-selector">1+</span>
+							<span class="round-selector">2+</span>
+							<span class="round-selector">3+</span>
+							<span class="round-selector">4+</span>
+							<span class="round-selector">5+</span>
+						</div>
+					</div>
+					<div class="container-search-box-2">
+						<div class="container-area-filter">
+							<div class="area">
+								<label for="area-min">ÁREA MÍNIMA</label>
+								<input type="number" name="" id="area-min" placeholder="m²" />
+							</div>
+							<div class="area">
+								<label for="area-max">ÁREA MÁXIMA</label>
+								<input
+									type="number"
+									name=""
+									id="area-max"
+									placeholder="ilimitado m²"
+								/>
+							</div>
+						</div>
+						<label for="">NÚMERO DE VAGAS NA GARAGEM</label>
+						<div class="container-round-selector">
+							<span class="round-selector">1+</span>
+							<span class="round-selector">2+</span>
+							<span class="round-selector">3+</span>
+							<span class="round-selector">4+</span>
+							<span class="round-selector">5+</span>
+						</div>
+						<label for="">NÚMERO DE BANHEIROS</label>
+						<div class="container-round-selector">
+							<span class="round-selector">1+</span>
+							<span class="round-selector">2+</span>
+							<span class="round-selector">3+</span>
+							<span class="round-selector">4+</span>
+							<span class="round-selector">5+</span>
+						</div>
+					</div>
+				</div>
+				<div class="container-main-results">
+					<div class="container-main-results-categories">
+						<ul>
+							<li><a href="">COMPRAR</a></li>
+							<li><a href="">ALUGAR</a></li>
+							<li><a href="">IMÓVEIS NOVOS</a></li>
+							<li><a href="">SELEÇÃO VIVA REAL</a></li>
+						</ul>
+					</div>
+					<br />
+					<hr />
+					<div class="container-main-results-quantity">
+						<p></p>
+						<br />
+						<span class="city-tag"></span>
+					</div>
+					<div class="container-main-results-findings">
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer>
+			<div class="footer-container">
+				<div class="footer-services-container">
+					<div class="footer-services-section">
+						<span>Encontre imóveis</span>
+						<a href="">Comprar</a>
+						<a href="">Alugar</a>
+						<a href="">Imóveis Novos</a>
+						<a href="">Descobrir</a>
+						<a href="">Dúvidas sobre como usar o Viva Real</a>
+						<a href="">Mapa do site</a>
+					</div>
+					<div class="footer-services-section">
+						<span>Institucional</span>
+						<a href="">Sobre nós</a>
+						<a href="">Quer trabalhar conosco?</a>
+					</div>
+					<div class="footer-services-section">
+						<span>Mais produtos</span>
+						<a href="">Blog</a>
+						<a href="">Viva Corretor</a>
+						<a href="">Simulador Minha Casa Minha Vida</a>
+						<a href="">Simulador de Financiamento de Imóveis</a>
+					</div>
+					<div class="footer-services-section">
+						<div>
+							<span>Anunciante</span>
+							<a href="">Anunciar imóveis</a>
+							<a href="">Dúvidas frequentes dos Anunciantes</a>
+						</div>
+						<div>
+							<span>Social</span>
+							<div>
+								<i class="fab fa-facebook"></i>
+								<i class="fab fa-twitter"></i>
+								<i class="fab fa-youtube"></i>
+								<i class="fab fa-instagram"></i>
+							</div>
+						</div>
+						<div>
+							<span>Aplicativos</span>
+							<div>
+								<img src="images/google-play-badge.png" alt="" srcset="" />
+								<img src="images/Download_on_the_App_Store_Badge_PTBR_RGB_blk_092917.svg" alt="" srcset="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-company-info">
+					<div class="group-logo-container">
+						<img src="https://cdn1.vivareal.com/p/15151-095e6d376/v/static/app/svg/styleguide/logo/olxbr-branco.svg" alt="">
+					</div>
+					<div class="copyright-container">
+						<span>Copyright © 2021 OLX Brasil. Todos os direitos reservados.</span>
+					</div>
+					<div class="policies-container">
+						<ul>
+							<li><a href="">TERMOS DE USO</a></li>
+							<li><a href="">POLÍTICA DE PRIVACIDADE</a></li>
+							<li><a href="">POLÍTICA DE COOKIES</a></li>
+							<li><a href="">PORTAL DE PRIVACIDADE</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>
